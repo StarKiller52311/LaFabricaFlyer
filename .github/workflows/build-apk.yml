@@ -9,8 +9,3 @@ jobs:
     steps:
       - name: Probar GitHub Actions
         run: echo "GitHub Actions funciona correctamente"
-      - name: Guardar APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: LaFabricaFlyerAI-debug
-          path: LaFabricaFlyerAI/app/build/outputs/apk/debug/app-debug.apk
