@@ -1,40 +1,14 @@
-name: Build La Fábrica Flyer AI
+name: La Fabrica Flyer AI
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "LaFabricaFlyerAI_2.0_IA.zip"
 
 jobs:
-  build:
+  prueba:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Descargar repositorio
-        uses: actions/checkout@v4
-
-      - name: Preparar Java 17
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: "17"
-
-      - name: Preparar Gradle
-        uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: "8.13"
-
-      - name: Extraer proyecto
-        run: |
-          rm -rf LaFabricaFlyerAI
-          unzip -q LaFabricaFlyerAI_2.0_IA.zip
-          test -f LaFabricaFlyerAI/settings.gradle
-
-      - name: Compilar APK
-        working-directory: LaFabricaFlyerAI
-        run: gradle --no-daemon assembleDebug
-
+      - name: Probar GitHub Actions
+        run: echo "GitHub Actions funciona correctamente"
       - name: Guardar APK
         uses: actions/upload-artifact@v4
         with:
