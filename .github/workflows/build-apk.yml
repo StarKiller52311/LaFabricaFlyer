@@ -25,7 +25,7 @@ jobs:
       - name: Extraer proyecto
         run: |
           rm -rf LaFabricaFlyerAI
-          unzip -q LaFabricaFlyerAI_2.0_IA.zip
+          unzip -q LaFabricaFlyerAI_2.1_LOCAL.zip
           test -f LaFabricaFlyerAI/settings.gradle
 
       - name: Compilar APK
